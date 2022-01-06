@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+ install:
+   runtime-versions:
+     java: 8
+ pre_build:
+   commands:
+   - yum install openjdk-8-jdk -y 
+   - yum install maven -y
+   - echo maven installed
+   - cd maven-web-application
+ build:
+   commands:
+   - mvn clean package
+artifacts:
+  files:
+  - target/*.war
+   
