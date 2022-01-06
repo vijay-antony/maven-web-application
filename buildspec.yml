@@ -7,7 +7,6 @@ phases:
    commands:
    - yum install maven -y
    - echo maven installed
-   - cd maven-web-application
  build:
    commands:
    - mvn clean package
